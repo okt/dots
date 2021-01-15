@@ -1,0 +1,16 @@
+set afterends
+set atblanks
+set autoindent
+set casesensitive
+set errorcolor normal,red
+set linenumbers
+set numbercolor blue,normal
+set titlecolor  magenta,normal
+set statuscolor blue,normal
+set functioncolor magenta,normal
+set keycolor magenta,black
+set smarthome
+set softwrap
+set tabsize 2
+set tabstospaces
+set trimblanks

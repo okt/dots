@@ -1,0 +1,6 @@
+XDG_DESKTOP_DIR = "$HOME/down";
+XDG_DOCUMENTS_DIR = "$HOME/work";
+XDG_DOWNLOAD_DIR = "$HOME/down";
+XDG_MUSIC_DIR = "$HOME/audi";
+XDG_PICTURES_DIR = "$HOME/pics";
+XDG_VIDEOS_DIR = "$HOME/vids";

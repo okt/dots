@@ -1,0 +1,51 @@
+mpd_music_dir = /home/okt/audi
+
+song_list_format = "{%a - %t}|{%f} $R %b
+cyclic_scrolling = no
+lines_scrolled = 1
+playlist_display_mode = classic
+
+progressbar_look = "─╼─"
+# main_window_highlight_color = green
+# active_column_color = green
+
+
+##### colors definitions #####
+#
+colors_enabled = yes
+#
+#empty_tag_color = cyan
+#
+header_window_color = white
+display_volume_level = no
+#
+#volume_color = default
+#
+#state_line_color = default
+#
+#state_flags_color = default
+#
+main_window_color = blue
+#
+#color1 = white
+#
+color2 = green
+#
+#main_window_highlight_color = green
+#
+#progressbar_color = black
+#
+progressbar_elapsed_color = cyan
+#
+statusbar_color = white
+#
+#alternative_ui_separator_color = black
+#
+#active_column_color = red
+#
+#visualizer_color = yellow
+#
+#window_border_color = green
+#
+#active_window_border = red
+#

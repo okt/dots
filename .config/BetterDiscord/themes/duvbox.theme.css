@@ -1,0 +1,724 @@
+//META{"name":"discord Gruvbox","description":"A Discord theme based on Gruvbox","author":"Patrykf03","version":"1.0"}*//
+
+/* Iosevka, codeblock font */
+
+/*
+@import url("https://typeof.net/Iosevka/fonts.css");
+
+code {
+    font-family: "Iosevka Web", monospace;
+    font-weight: 400;
+}
+
+*/
+
+/* Iosevka on Powercord */
+/*
+pre &gt; code {
+    font-family: "Iosevka Web", monospace;
+    font-weight: 400;
+}
+*/
+
+/** End Iosevka 
+    --background-primary: #32302f;
+    --background-secondary: #282828;
+    --background-tertiary: #1d2021;
+
+*/
+
+.theme-dark {
+    --background-primary: #1d2021;
+    --background-secondary: #161616;
+    --background-tertiary: #161616;
+    --background-accent: #32302f;
+    --text-normal: #fbf1c7;
+    --text-spotify: #ebdbb2;
+    --text-muted: #d5c4a1;
+    --text-link: #508A8B;
+    --background-floating: #3c3836;
+    --header-primary: #ebdbb2;
+    --header-secondary: #bdae93;
+    --header-spotify: #b8bb26;
+    --interactive-normal: #ebdbb2;
+    --interactive-hover: #bdae93;
+    --interactive-active: #fbf1c7;
+
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+    background: transparent !important;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--background-secondary) !important;
+    width:2px !important;
+    border:none !important;
+    border-radius: 0px !important;
+}
+
+
+
+/* New Messages Bar */
+div[class*=3D"newMessagesBar"] {
+    background-color: var(--background-secondary);
+}
+
+
+/* Mentions (channel, user) */
+span[class*=3D"mention"][class*=3D"interactive"] {
+    color: var(--text-link);
+}
+
+/* Mentions (role) */
+span[class*=3D"mention"] {
+    color: var(--text-link);
+}
+
+div[class^=3D"scrollableContainer"] {
+    background-color: var(--background-secondary);
+}
+
+div[class^=3D"name"] &gt; span {
+    color: var(--text-normal);
+}
+
+h1, h2, h3 {
+    color: var(--text-normal);
+}
+
+h3[class^=3D"title"] {
+    color: var(--text-normal);
+}
+
+div[class^=3D"panels"] &gt; div[class^=3D"container"] {
+    background-color: var(--background-secondary);
+}
+
+section[class^=3D"panels"] &gt; div[class^=3D"container"] &gt; div[class^=
+=3D"nameTag"] &gt; * {
+    color: var(--text-normal);
+}
+
+section[class^=3D"panels"] &gt; div[class^=3D"container"] {
+    background-color: var(--background-secondary);
+}
+
+div.userSettingsAccount-2eMFVR &gt; div &gt; div {
+    background-color: var(--background-primary);
+}
+
+* &gt; div[class^=3D"contents"] {
+    color: var(--text-normal)
+}
+
+div[class^=3D"size14"] {
+    color: var(--text-normal);
+}
+
+div[class^=3D"topic"] {
+    color: var(--text-muted);
+}
+
+div[class^=3D"friendsTable"] {
+    background-color: var(--background-primary);
+}
+
+[class^=3D"input"] {
+    background-color: var(--background-primary);
+}
+
+div[class^=3D"uploadModal"] &gt; div[class^=3D"inner"], div[class^=3D"inner=
+"] &gt; div[class^=3D"uploadModal"], div[class^=3D"uploadModal"] &gt; div[c=
+lass^=3D"footer"] {
+    background-color: var(--background-primary);
+}
+
+[class^=3D"usernameContainer"]:not([style]){
+    color: var(--text-normal)
+}
+
+div[class^=3D"username"] {
+    background-color: inherit;
+}
+
+span[class^=3D"wrapperHover"][role=3D"button"] {
+    color: var(--text-link)
+}
+
+[class^=3D"autocompleteInner"] {
+    background-color: var(--background-secondary)
+}
+
+
+a[class^=3D"wrapper"] {
+    color: var(--text-normal)
+}
+
+[class^=3D"tooltipRight"] {
+    color: var(--text-normal)
+}
+
+div[role=3D"dialog"] {
+    color: var(--background-primary)
+}
+
+div[class*=3D"activityPanel"] {
+    background-color: var(--background-secondary)
+}
+
+div[class^=3D"text"] {
+    color: var(--text-normal)
+}
+
+div[class^=3D"side"] &gt; div[class^=3D"item"] {
+    background-color: var(--background-secondary)
+}
+
+[class^=3D"userInfoViewing"] {
+    background-color: var(--background-secondary);
+}
+
+[class*=3D"lookFilled"][class*=3D"colorBrand"] {
+    background-color: var(--text-link);
+}
+
+div[class*=3D"tooltip"] {
+    background-color: var(--background-secondary);
+}
+div[class*=3D"contextMenu"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"header"] {
+    background-color: var(--background-secondary)
+}
+
+div[class*=3D"details"] {
+    color: var(--text-normal);
+}
+
+div[class*=3D"headerTextNormal"] {
+    background-color: var(--background-secondary);
+}
+
+span {
+    color: var(--text-normal)
+}
+
+span[class*=3D"headerName"] {
+    color: var(--text-normal)
+}
+
+div[class*=3D"userPopout"] &gt; div[class*=3D"footer"] {
+    background-color: var(--background-primary)
+}
+
+div[class*=3D"scrollerWrap"][class*=3D"body"] &gt; div[class*=3D"scroller"]=
+ {
+    background-color: var(--background-primary)
+}
+
+[class*=3D"footer"] &gt; [class*=3D"quickMessage"] {
+    background-color: var(--background-primary)
+}
+
+div[class^=3D"topSectionPlaying"] &gt; header[class^=3D"header"] {
+    background-color: var(--background-secondary);
+}
+
+header[class^=3D"title"] {
+    color: var(--text-normal)
+}
+
+div[class^=3D"tabBody"] {
+    background-color: var(--background-primary);
+}
+
+div[class^=3D"topSectionNormal"] &gt; header &gt; div[class^=3D"headerInfo"=
+]{
+    background-color: inherit;
+}
+
+div[class^=3D"topSectionSpotify"] &gt; header &gt; div[class^=3D"headerInfo=
+"]{
+    background-color: inherit;
+}
+
+div[class^=3D"topSectionSpotify"] {
+    background-color: var(--header-spotify);
+}
+
+div[class*=3D"nameNormal"][class*=3D"ellipsis"][class*=3D"textRow"][class*=
+=3D"weightSemiBold"] &gt; a {
+    color: var(--text-normal)
+}
+
+div[class*=3D"detailsWrap"][class*=3D"textRow"] &gt; span &gt; a {
+    color: var(--text-normal);
+}
+
+div[class*=3D"state"][class*=3D"ellipsis"][class*=3D"textRow"] &gt; span &g=
+t; a {
+    color: var(--text-normal);
+}
+
+div[class^=3D"headerTextNormal"][class*=3D"headerText"][class*=3D"small"][c=
+lass*=3D"marginBottom8"][class*=3D"weightBold"] {
+    color: var(--text-normal);
+    background-color: var(--background-secondary);
+    background: transparent !important;
+}
+
+div[class*=3D"details"][class*=3D"ellipsis"][class*=3D"textRow"] {
+    color: var(--text-normal)
+}
+
+div[class*=3D"timestamp"] {
+    color: var(--text-normal)
+}
+
+section[class^=3D"section"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"container"] &gt; div[class*=3D"contentWrapper"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"selectorSelected"][class*=3D"selector"] {
+    background-color: var(--background-tertiary);
+}
+
+div[class*=3D"selectorSelected"][class*=3D"selector"] &gt; * &gt; div[class=
+*=3D"marginLeft"] {
+    color: var(--text-normal)
+}
+
+div[class*=3D"selectorSelected"][class*=3D"selector"] &gt; * &gt; div[class=
+*=3D"colorStandard"] {
+    color: var(--text-muted);
+}
+
+[class*=3D"selector"] &gt; * &gt; div[class*=3D"marginLeft"] {
+    color: var(--text-normal)
+}
+
+[class*=3D"selector"] &gt; * &gt; div[class*=3D"colorStandard"] {
+    color: var(--text-muted);
+}
+
+
+
+div[class*=3D"infoBar"] {
+    background-color: var(--background-tertiary);
+}
+
+div[class*=3D"body"][class*=3D"scrollerBase"][class*=3D"thin"] {
+    background-color: var(--background-primary);
+}
+
+/* Fix text colour when Spotify is playing */
+div[class*=3D"topSectionSpotify"] &gt; header &gt; div[class*=3D"headerInfo=
+"] &gt; div[class*=3D"nameTag"] &gt; * {
+    color: var(--text-spotify);
+}
+
+/* Fix button colours */
+div[class*=3D"topSectionSpotify"] &gt; header &gt; button[class*=3D"actionB=
+utton"] {
+    background-color: var(--background-tertiary);
+}
+
+div[class*=3D"topSectionNormal"] &gt; header &gt; button[class*=3D"actionBu=
+tton"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"topSectionPlaying"] &gt; header &gt; button[class*=3D"actionB=
+utton"] {
+    background-color: var(--background-tertiary);
+}
+
+/** Search **/
+div[class*=3D"resultsGroup"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"resultsGroup"] &gt; div[class*=3D"option"]::after {
+    background-color: var(--background-secondary);
+    background: transparent
+}
+
+div[class*=3D"resultsGroup"] &gt; div[class*=3D"option"]:hover {
+    background-color: var(--background-primary);
+}
+
+/** Channel topic **/
+div[class*=3D"layerContainer"] &gt; div[class*=3D"layer"] &gt; div[class*=
+=3D"focusLock"] &gt; div[class*=3D"modal"] &gt; div[class*=3D"content"] {
+    background-color: var(--background-secondary);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/** Playing statuses */
+* &gt; div[class*=3D"activityText"] {
+    color: var(--text-muted);
+}
+
+* &gt; svg {
+    color: var(--interactive-hover)
+}
+
+/** Header fixes */
+* &gt; span[class*=3D"activityName"] {
+    color: var(--text-normal)
+}
+
+div[class*=3D"activityUserPopout"] &gt; h3[class*=3D"headerTextNormal"][cla=
+ss*=3D"headerText"] {
+   color: var(--text-normal);
+}
+
+/** Role names */
+div[class*=3D"roleName"] {
+    color: var(--text-normal);
+}
+
+/** That discord icon on the top left */
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9 {
+    background-color: var(--background-primary);
+}
+.wrapper-1BJsBx .childWrapper-anI2G9 {
+    background-color: var(--background-primary);
+}
+
+/** and the pill beside it */
+div[class*=3D"pill"] &gt; span[class*=3D"item"] {
+    background-color: var(--background-primary)
+}
+
+/** Deleted Messages */
+div[class*=3D"focusLock"] &gt; div[class*=3D"root"] &gt; div[class*=3D"cont=
+ent"] {
+    background-color: var(--background-secondary);
+}
+div[class*=3D"focusLock"] &gt; div[class*=3D"root"] &gt; div[class*=3D"cont=
+ent"] &gt; div[class*=3D"message"] {
+    background-color: var(--background-tertiary);
+}
+
+div[class*=3D"focusLock"] &gt; div[class*=3D"root"] &gt; div[class*=3D"flex=
+"] {
+    background-color: var(--background-secondary);
+}
+
+/** Bot Tags */
+
+
+/** Discover Guilds */
+div[class*=3D"circleIconButton"][class*=3D"selected"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"dragRegion"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"container"] &gt; div[class*=3D"base"] &gt; div[class*=3D"cont=
+ent"] div[class*=3D"scroller"][class*=3D"auto"] {
+    background-color: var(--background-primary);
+}
+
+section[class*=3D"guildListSection"] &gt; div[class*=3D"guildList"] &gt; di=
+v[class*=3D"loaded"] &gt; div[class*=3D"card"] {
+    background-color: var(--background-tertiary);
+}
+
+div[class*=3D"searchBox"] {
+    border-color: var(--background-secondary);
+}
+
+div[class*=3D"searchBox"] &gt; div[class*=3D"inputWrapper"] {
+    background-color: var(--background-tertiary);
+
+}
+
+div[class*=3D"headerContentWrapper"] {
+    background-color: var(--background-primary);
+}
+
+div[class*=3D"headerContentWrapper"] &gt; div[class*=3D"headerContent"] {
+    background-color: var(--background-primary);
+}
+
+div[class*=3D"container"] &gt; div[class*=3D"search"] {
+    border-color: var(--background-primary);
+    color: var(--background-primary);
+}
+
+div[class*=3D"headerContentWrapper"] &gt; div[class*=3D"headerContent"] &gt=
+; * {
+    color: var(--text-normal)
+}
+
+
+div[class*=3D"categoryItem"][class*=3D"selected"] &gt; div[class*=3D"itemIn=
+ner"] &gt; * {
+    color: var(--text-normal)
+}
+
+/* Support new integrations menu */
+div[class*=3D"flex"][class*=3D"justifyStart"] &gt; button[class*=3D"copyBut=
+ton"] {
+    background-color: var(--background-tertiary);
+}
+
+div[class*=3D"flex"][class*=3D"vertical"][class*=3D"directionColumn"] &gt; =
+div[class*=3D"body"] {
+    background-color: var(--background-secondary);
+}
+
+/* Fix Invites */
+div[class*=3D"customScroller"] &gt; div[class*=3D"listContent"] &gt; div[cl=
+ass*=3D"headerSection"] {
+    background-color: var(--background-primary);
+}
+
+div[class*=3D"flexChild"] &gt; h4[class*=3D"title"] {
+    color: var(--text-muted);
+}
+div[class*=3D"flexChild"] &gt; div[class*=3D"text"] {
+    color: var(--text-muted);
+}
+
+/* Fix Nickname Menu */
+div[class*=3D"root"] &gt; form &gt; div[class*=3D"content"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"root"] &gt; form &gt; div[class*=3D"content"] &gt; div[class*=
+=3D"input"] &gt; h5[class*=3D"colorStandard"] {
+    background-color: var(--background-secondary);
+    margin: 0;
+    color: var(--text-normal);
+}
+
+
+div[class*=3D"root"] &gt; form &gt; div[class*=3D"content"] &gt; div[class*=
+=3D"input"] &gt; div[class*=3D"inputWrapper"] &gt; input {
+    background-color: var(--background-tertiary);
+}
+
+div[class*=3D"flex"][class*=3D"horizontalReverse"][class*=3D"directionRowRe=
+verse"] {
+    background-color: var(--background-floating);
+}
+
+/* Fix "Listen Along" */
+
+/* Modal */
+div[class*=3D"modal"] &gt; div[class*=3D"inner"] &gt; div[class*=3D"modal"]=
+ &gt; div[class*=3D"content"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"modal"] &gt; div[class*=3D"inner"] &gt; div[class*=3D"modal"]=
+ &gt; div[class*=3D"content"] &gt; div[class*=3D"invite"] {
+    background-color: var(--background-primary);
+}
+
+div[class*=3D"header"][class*=3D"inFront"] {
+    background-color: var(--background-primary);
+    color: var(--text-muted);
+}
+
+div[class*=3D"flex"][class*=3D"directionRow"][class*=3D"alignEnd"] &gt; div=
+ &gt; button {
+    background-color: var(--text-link);
+}
+
+div[class*=3D"content"][class*=3D"thin"] &gt; div[class*=3D"textArea"] &gt;=
+ div[class*=3D"scrollableContainer"] {
+    background-color: var(--background-primary);
+}
+
+/* Embed */
+div[id*=3D"messages"] &gt; div[class*=3D"container"] &gt; div[class*=3D"inv=
+ite"] {
+    background-color: var(--background-secondary);
+}
+
+div[id*=3D"messages"] &gt; div[class*=3D"container"] &gt; div[class*=3D"inv=
+ite"] &gt; * &gt; * &gt; div[class*=3D"header"] {
+    background-color: var(--background-secondary);
+}
+
+div[class*=3D"details"] &gt; a[class*=3D"anchor"] {
+    color: var(--text-normal);
+}
+
+div[class*=3D"state"] {
+    color: var(--text-normal);
+}
+
+div[class*=3D"state"] &gt; span &gt; a[class*=3D"anchor"] {
+    color: var(--text-normal);
+}
+
+/* Tooltip fix */
+div[class*=3D"tooltipContent"] {
+    color: var(--text-normal);
+}
+
+/* MessageBox fix */
+div[class*=3D"markdown"] {
+    color: var(--text-normal);
+}
+
+/* Spotify in Powercord */
+div[class=3D"powercord-spotify"] {
+    background-color: var(--background-secondary);
+}
+
+div[class=3D"powercord-spotify hover"] {
+    background-color: var(--background-secondary);
+}
+
+/** Change Progress Bar colour */
+div[class=3D"powercord-spotify"] &gt; div[class*=3D"spotify-seek"] &gt; div=
+[class*=3D"spotify-seek-bar"] &gt; * {
+    background-color: var(--header-spotify);
+}
+
+/** Change Progress Bar colour */
+div[class=3D"powercord-spotify hover"] &gt; div[class*=3D"spotify-seek"] &g=
+t; div[class*=3D"spotify-seek-bar"] &gt; * {
+    background-color: var(--header-spotify);
+}
+
+/* BetterDiscord toasts */
+/* TODO: Fix shadows of toasts */
+div[class=3D"bd-toast"] {
+    background: var(--background-floating);
+    color: var(--text-normal);
+}
+/* Sadly colors of other toasts(toast-info, toast-success, toast-warning, t=
+oast-error) can't be overridden */
+
+/** Gruvbox (dark) Highlight.js theme. Ported from https://github.com/highl=
+ightjs/highlight.js/blob/master/src/styles/gruvbox-dark.css */
+.theme-dark .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #282828;
+}
+
+.theme-dark .hljs,
+.hljs-subst {
+    color: #ebdbb2;
+}
+
+/* Gruvbox Red */
+.theme-dark
+.hljs-deletion,
+.hljs-formula,
+.hljs-keyword,
+.hljs-link,
+.hljs-selector-tag {
+    color: #fb4934;
+}
+
+/* Gruvbox Blue */
+.theme-dark
+.hljs-built_in,
+.hljs-emphasis,
+.hljs-name,
+.hljs-quote,
+.hljs-strong,
+.hljs-title,
+.hljs-variable {
+    color: #83a598;
+}
+
+/* Gruvbox Yellow */
+.hljs-attr,
+.hljs-params,
+.hljs-template-tag,
+.hljs-type {
+    color: #fabd2f;
+}
+
+/* Gruvbox Purple */
+.theme-dark
+.hljs-builtin-name,
+.hljs-doctag,
+.hljs-literal,
+.hljs-number {
+    color: #8f3f71;
+}
+
+/* Gruvbox Orange */
+.theme-dark
+.hljs-code,
+.hljs-meta,
+.hljs-regexp,
+.hljs-selector-id,
+.hljs-template-variable {
+    color: #fe8019;
+}
+
+/* Gruvbox Green */
+.theme-dark
+.hljs-addition,
+.hljs-meta-string,
+.hljs-section,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-string,
+.hljs-symbol {
+    color: #b8bb26;
+}
+
+/* Gruvbox Aqua */
+.theme-dark
+.hljs-attribute,
+.hljs-bullet,
+.hljs-class,
+.hljs-function,
+.hljs-function .hljs-keyword,
+.hljs-meta-keyword,
+.hljs-selector-pseudo,
+.hljs-tag {
+    color: #8ec07c;
+}
+
+/* Gruvbox Gray */
+.theme-dark,
+.hljs-comment {
+    color: #928374;
+}
+
+/* Gruvbox Purple */
+.theme-dark
+.hljs-link_label,
+.hljs-literal,
+.hljs-number {
+    color: #d3869b;
+}
+
+.theme-dark
+.hljs-comment,
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.theme-dark
+.hljs-section,
+.hljs-strong,
+.hljs-tag {
+    font-weight: bold;
+}
