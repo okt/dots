@@ -1,0 +1,23 @@
+// * {
+//   all: unset;
+// }
+window {
+  background-color: rgba(2, 2, 2, 0.8);
+  color: rgba(153, 143, 134, 0.836);
+  font-family: "SF Pro Display";
+}
+.container {
+  margin: 300px 800px;
+}
+.volume-container {
+  font-size: 32px;
+  color: #458588;
+  scale {
+    margin-top: 1em;
+  }
+}
+
+.time-side {
+  // font-family: "SFMono Nerd Font";
+  font-size: 180px;
+}

@@ -1,4 +1,3 @@
-
 [Default Applications]
 application/pdf=zathura.desktop
 text/pdf=zathura.desktop
@@ -8,3 +7,6 @@ text/html=firefox.desktop
 x-scheme-handler/about=firefox.desktop
 x-scheme-handler/vscode=code.desktop
 x-scheme-handler/unknown=firefox.desktop
+
+[Added Associations]
+image/jpeg=imv.desktop;

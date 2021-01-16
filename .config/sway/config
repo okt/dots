@@ -153,11 +153,18 @@ bindcode 445 exec $term
 bindcode 446 exec $term
 
 bindsym Print            exec grimshot save output
-bindsym $mod+Print       exec grimshot save active
+bindsym $mod+Print       exec grimshot save window
 bindsym $mod+Shift+Print exec grimshot save area
-bindsym $mod+Ctrl+Print  exec grimshot save window
 
 bar {
     swaybar_command waybar
     # position top
 }
+
+for_window [title="Eww"] {
+  border pixel 0
+  mode floating
+  no_focus
+}
+
+# workspace number 1

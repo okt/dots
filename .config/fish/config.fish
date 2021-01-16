@@ -1,4 +1,5 @@
 # Exports
+# set --export GTK_THEME "phocus"
 set --export SBT_OPTS "-Xms512m -Xmx1536m -Xss2m"
 set --export FZF_DEFAULT_COMMAND 'fd --type f --color=never'
 set --export FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
