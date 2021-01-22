@@ -14,3 +14,4 @@ set softwrap
 set tabsize 2
 set tabstospaces
 set trimblanks
+set minibar

@@ -1,3 +1,10 @@
+# ░██████╗░██╗░░░░░░░██╗░█████╗░██╗░░░██╗
+# ██╔════╝░██║░░██╗░░██║██╔══██╗╚██╗░██╔╝
+# ╚█████╗░░╚██╗████╗██╔╝███████║░╚████╔╝░
+# ░╚═══██╗░░████╔═████║░██╔══██║░░╚██╔╝░░
+# ██████╔╝░░╚██╔╝░╚██╔╝░██║░░██║░░░██║░░░
+# ╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝░░░╚═╝░░░
+#
 # Workaround for GTK apps hanging during init
 # See https://github.com/swaywm/sway/wiki#gtk-applications-take-20-seconds-to-start
 # See https://github.com/swaywm/sway/issues/5732
@@ -7,6 +14,7 @@ exec dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 # End of workaround
 
+exec mako
 exec gnome-keyring-daemon --daemonize
 # export SSH_AUTH_SOCK
 

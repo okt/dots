@@ -1,0 +1,36 @@
+//META{"name":"discord gruv mods","description":"A Discord theme based on Gruvbox","author":"okt","version":"1.0"}*//
+
+* {
+   font-family: "SF Pro Display";
+}
+
+pre, code {
+   font-family: "SF Mono";
+}
+
+.item-2hkk8m,
+.unread-2lAfLh {
+   border-radius: 0;
+   background-color: #458588;
+}
+
+.scrollableContainer-2NUZem {
+   border-radius: 0 0 8px 8px;
+}
+
+.iconWrapper-2OrFZ1[aria-label="Help"],
+.iconWrapper-2OrFZ1[aria-label^="Mute"],
+.button-3AYNKb,
+.theme-dark .form-2fGMdU:before {
+   display: none;
+}
+
+.sidebar-2K8pFh.hideElement + .chat-3bRxxu .messagesWrapper-1sRNjr + .form-2fGMdU {
+   padding-top: 8px;
+}
+
+.childWrapper-anI2G9,
+.clickable-3rdHwn .icon-22AiRD,
+.button-14-BFJ {
+   color: #ebdbb255;
+}

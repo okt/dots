@@ -7,7 +7,7 @@
           {{hour}}:{{min}}
         </box>
         <box class="volume-container" orientation="v">
-          Volume
+          Volume 墳
           <scale min="0" max="101" value="{{volume}}" onchange="amixer sset Master {}%"/>
         </box>
       </box>
