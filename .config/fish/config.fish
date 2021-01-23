@@ -12,6 +12,17 @@ set --export FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS'
   --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54
   '
 
+set --export GRIM_DEFAULT_DIR "/home/okt/pics/snap"
+set --export GTK_THEME "phocus"
+set --export XDG_DESKTOP_DIR "/home/okt/down"
+set --export XDG_DOCUMENTS_DIR "/home/okt/work"
+set --export XDG_DOWNLOAD_DIR "/home/okt/down"
+set --export XDG_MUSIC_DIR "/home/okt/audi"
+set --export XDG_PICTURES_DIR "/home/okt/pics"
+set --export XDG_SCREENSHOTS_DIR "/home/okt/pics/snap"
+set --export XDG_VIDEOS_DIR "/home/okt/vids"
+
+
 # Aliases
 alias l='colorls --sd --dark'
 alias ls='colorls --sd -A --dark'

@@ -16,6 +16,7 @@ exec dbus-update-activation-environment 2>/dev/null && \
 
 exec mako
 exec gnome-keyring-daemon --daemonize
+exec /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
 # export SSH_AUTH_SOCK
 
 # workstyle script to change workspace names to contents
@@ -39,11 +40,11 @@ default_border pixel 1
 titlebar_border_thickness 1
 titlebar_padding 20 8
 # class                   border  bg      text    ind     child
-client.background                 #161616
-client.focused            #458588 #458588 #FFFFFF #458588 #458588
-client.unfocused          #323440 #161616 #a89984 #323440 #323440
-client.focused_inactive   #323440 #1b1c22 #458588 #323440 #323440
-client.urgent             #ff5555 #ff5555 #ff5555 #ff5555 #ff5555
+client.background                 #12131f
+client.focused            #6cac99 #6cac99 #FFFFFF #6cac99 #6cac99
+client.unfocused          #323440 #12131f #a89984 #323440 #323440
+client.focused_inactive   #323440 #1b1c22 #6cac99 #323440 #323440
+client.urgent             #ff4e4e #ff4e4e #ff4e4e #ff4e4e #ff4e4e
 
 
 # DISPLAY
@@ -51,8 +52,8 @@ client.urgent             #ff5555 #ff5555 #ff5555 #ff5555 #ff5555
 
 output eDP-1 scale 1
 # output eDP-1 bg ~/pics/walls/wallhaven-83wx2.jpg fill
-output * bg ~/pics/walls/nature/cherry_blossoms.jpg fill
-# output * bg #161616 solid_color
+# output * bg ~/pics/walls/nature/cherry_blossoms.jpg fill
+output eDP-1 bg #12131f solid_color
 
 exec swayidle -w \
   timeout 120 'swaymsg "output * dpms off"' \

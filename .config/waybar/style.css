@@ -1,4 +1,45 @@
 
+    @define-color background #12131f;
+    @define-color foreground #d7b7bb;
+    @define-color regular0 #1a1d45;
+    @define-color regular1 #ff4e4e;
+    @define-color regular2 #7eb564;
+    @define-color regular3 #eaad64;
+    @define-color regular4 #7a89ec;
+    @define-color regular5 #b66cdc;
+    @define-color regular6 #6cac99;
+    @define-color regular7 #d7b7bb;
+    @define-color bright0 #323884;
+    @define-color bright1 #fd5d5d;
+    @define-color bright2 #7eb564;
+    @define-color bright3 #eaad64;
+    @define-color bright4 #7a89ec;
+    @define-color bright5 #b66cdc;
+    @define-color bright6 #6cac99;
+    @define-color bright7 #d7b7bb;
+
+.picker {
+    color: #12131f; /* @background */
+    color: #d7b7bb; /* @foreground */
+    color: #1a1d45; /* @regular0 */
+    color: #ff4e4e; /* @regular1 */
+    color: #7eb564; /* @regular2 */
+    color: #eaad64; /* @regular3 */
+    color: #7a89ec; /* @regular4 */
+    color: #b66cdc; /* @regular5 */
+    color: #6cac99; /* @regular6 */
+    color: #d7b7bb; /* @regular7 */
+    color: #323884; /* @bright0 */
+    color: #fd5d5d; /* @bright1 */
+    color: #7eb564; /* @bright2 */
+    color: #eaad64; /* @bright3 */
+    color: #7a89ec; /* @bright4 */
+    color: #b66cdc; /* @bright5 */
+    color: #6cac99; /* @bright6 */
+    color: #d7b7bb; /* @bright7 */
+    color: #323440;
+}
+
 * {
     border: none;
     border-radius: 0;
@@ -10,8 +51,8 @@
 }
 
 window#waybar {
-    background-color: rgba(22, 22, 22, 0.9);
-    color: #928374;
+    background-color: @background;
+    color: @foreground;
     /* border: 1px solid rgba(204, 36, 29, 0.2); */
     border: 1px solid rgba(87, 91, 112, 0.3);
     transition-property: background-color;
@@ -35,7 +76,7 @@ window#waybar.solo {
     padding: 0 5px;
     background-color: transparent;
     /* color: #928374; */
-    color: #282828;
+    color: @foreground;
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
 }
@@ -43,22 +84,22 @@ window#waybar.solo {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: transparent;
-    box-shadow: inset 0 -3px #cc241d;
+    box-shadow: inset 0 -3px @regular1;
 }
 
 #workspaces button.focused {
-    color: #cc241d;
+    color: @regular1;
     /* color: #000000; */
     box-shadow: inset 0 -3px transparent;
 }
 
 #workspaces button.urgent {
-    color: #cc241d;
+    color: @regular1;
 }
 
 #mode {
-    color: #cc241d;
-    border-bottom: 3px solid #cc241d;
+    color: @regular1;
+    border-bottom: 3px solid @regular1;
 }
 
 #clock,
@@ -84,7 +125,7 @@ window#waybar.solo {
 }
 #window {
     /* color: #4F4F4F; */
-    color: #9c9991;
+    color: @regulars7;
     font-family: "SF Pro Display";
 }
 
@@ -99,7 +140,7 @@ window#waybar.solo {
 }
 
 #clock {
-    color: #ebdbb2;
+    color: @regular7;
     /* padding-right: 50px; */
     /* padding: 0; */
     /* margin: 0; */
@@ -111,17 +152,17 @@ window#waybar.solo {
     padding-left: 0;
 }
 #battery {
-    color: #d79921;
+    color: @regular3;
 }
 
 #battery.charging {
-    color: #98971a;
+    color: @regular2;
 }
 
 @keyframes blink {
     to {
         background-color: transparent;
-        color: #cc241d;
+        color: @regular1;
     }
 }
 
@@ -148,51 +189,52 @@ label:focus {
 
 #memory,
 #cpu {
-  color: #689d6a;
+  color: @regular5;
+  /* color: var(--regular2) */
 }
 
 #backlight {
-    color: #b16286;
+    color: @regular4;
 }
 
 #network.wifi {
-    color: #98971a;
+    color: @regular2;
 }
 #network.disconnected {
-    color: #cc241d;
+    color: @regular1;
 }
 
 #pulseaudio {
-    color: #458588;
+    color: @regular7;
 }
 
 #pulseaudio.muted {
-    color: #575b70;
+    color: @regular0;
 }
 
 #temperature {
-    color: #689d6a;
+    color: @regular5;
     padding-right: 0;
     margin-right: 0;
 }
 
 #temperature.critical {
-    color: #cc241d;
+    color: @regular1;
 }
 
 #tray {
 }
 
 #idle_inhibitor {
-    color: #ebdbb2;
+    /* color: ; */
 }
 
 #idle_inhibitor.activated {
-    color: #cc241d;
+    color: @regular1;
 }
 
 #language {
-    color: #740864;
+    color: @regular5;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
