@@ -79,6 +79,8 @@
       \ }
 
   call plug#begin('~/.local/share/nvim/plugged')
+      Plug 'sheerun/vim-polyglot'
+      Plug 'ghifarit53/daycula-vim' , {'branch' : 'main'}
       Plug 'glepnir/dashboard-nvim'
       "Plug 'mhinz/vim-startify'
       Plug 'morhetz/gruvbox'
@@ -126,10 +128,13 @@
   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   " => Colors and Fonts
   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  let g:daycula_transparent_background = 1
+
   syntax enable
   " set termguicolors
   set background=dark
   colorscheme gruvbox
+  " colorscheme daycula
   set encoding=utf8
   set ffs=unix,dos,mac
   highlight Normal ctermbg=none
