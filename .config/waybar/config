@@ -2,15 +2,19 @@
     "layer": "top",
     "position": "top",
     //"width": 1900,
-    "height": 40,
+    "height": 30,
     "margin-left": 20,
     "margin-right": 20,
     "margin-top": 20,
     //"margin-bottom": 20,
     "modules-left": [ "sway/workspaces#display", "sway/mode", "sway/window"],
     //"modules-center": ["sway/window"],
-    "modules-right": ["temperature", "cpu", "memory", "network", "pulseaudio", "backlight", "battery", "clock#utc", "clock"],
+    "modules-right": ["temperature", "cpu", "memory", "network", "pulseaudio", "backlight", "battery", "tray", "clock#utc", "clock"],
     // Modules configuration
+    "tray": {
+        "icon-size": 14,
+        "spacing": 8
+    },
     "sway/window": {
         "max-length": 60
     },
@@ -112,4 +116,3 @@
         "on-click": "pavucontrol"
     }
 }
-

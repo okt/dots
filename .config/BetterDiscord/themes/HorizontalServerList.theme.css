@@ -12,6 +12,6 @@
 /* @import url("https://gibbu.github.io/BetterDiscord-Themes/addons/bottomhsl.css"); */
 
 :root {
-  --HSL-server-icon-size: 32px;  /* Size of the server icons | DEFAULT: 40px */
-  --HSL-server-spacing: 12px;  /* Spacing between each server icon | DEFAULT: 10px */
+  --HSL-server-icon-size: 24px;  /* Size of the server icons | DEFAULT: 40px */
+  --HSL-server-spacing: 6px;  /* Spacing between each server icon | DEFAULT: 10px */
 }

@@ -66,23 +66,14 @@
 
   let g:fzf_layout = { 'down': '~10%' }
 
-  let g:dashboard_default_executive ='fzf'
-  let g:dashboard_default_header ='hydra'
-  let g:dashboard_custom_shortcut={
-      \ 'last_session'       : 'SPC s l',
-      \ 'find_history'       : 'SPC f h',
-      \ 'find_file'          : 'SPC f f',
-      \ 'new_file'           : 'SPC c n',
-      \ 'change_colorscheme' : 'SPC t c',
-      \ 'find_word'          : 'SPC f a',
-      \ 'book_marks'         : 'SPC f b',
-      \ }
 
   call plug#begin('~/.local/share/nvim/plugged')
       Plug 'sheerun/vim-polyglot'
       Plug 'ghifarit53/daycula-vim' , {'branch' : 'main'}
-      Plug 'glepnir/dashboard-nvim'
-      "Plug 'mhinz/vim-startify'
+      "Plug 'glepnir/dashboard-nvim'
+      Plug 'mhinz/vim-startify'
+      Plug 'kyazdani42/nvim-web-devicons'
+      Plug 'romgrk/barbar.nvim'
       Plug 'morhetz/gruvbox'
       Plug 'cespare/vim-toml'
       Plug 'jiangmiao/auto-pairs'
@@ -166,18 +157,6 @@
   let g:mapleader="\<Space>"
   nmap <Leader>ss :<C-u>SessionSave<CR>
   nmap <Leader>sl :<C-u>SessionLoad<CR>
-  nnoremap <silent> <Leader>fh :DashboardFindHistory<CR>
-  nnoremap <silent> <Leader>ff :DashboardFindFile<CR>
-  nnoremap <silent> <Leader>tc :DashboardChangeColorscheme<CR>
-  nnoremap <silent> <Leader>fa :DashboardFindWord<CR>
-  nnoremap <silent> <Leader>fb :DashboardJumpMark<CR>
-  nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
-
-  noremap <SPACE> <Nop>
-  noremap <Up>    :10winc -<CR>
-  noremap <Down>  :10winc +<CR>
-  noremap <Left>  :10winc <<CR>
-  noremap <Right> :10winc ><CR>
 
   let mapleader = " "
 
@@ -196,3 +175,38 @@
   map <C-l> <C-W>l
 
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
+  " Magic buffer-picking mode
+noremap <silent> <C-s> :BufferPick<CR>
+" Sort automatically by...
+nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
+nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
+" Move to previous/next
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+nnoremap <silent>    <A->> :BufferMoveNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+nnoremap <silent>    <A-9> :BufferLast<CR>
+" Close buffer
+nnoremap <silent>    <A-c> :BufferClose<CR>
+" Wipeout buffer
+"                          :BufferWipeout<CR>
+" Close commands
+"                          :BufferCloseAllButCurrent<CR>
+"                          :BufferCloseBuffersLeft<CR>
+"                          :BufferCloseBuffersRight<CR>
+
+" Other:
+" :BarbarEnable - enables barbar (enabled by default)
+" :BarbarDisable - very bad command, should never be used

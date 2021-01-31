@@ -22,7 +22,7 @@
 
 	<windows>
     <window name="time_side">
-      <geometry x="0px" y="0px" width="100%" height="100%"/>
+      <geometry x="0px" y="0px"/>
       <widget>
         <time_side/>
       </widget>

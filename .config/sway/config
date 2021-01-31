@@ -49,10 +49,11 @@ client.urgent             #ff5555 #ff5555 #ff5555 #ff5555 #ff5555
 # DISPLAY
 #
 
-output eDP-1 scale 1
-# output eDP-1 bg ~/pics/walls/wallhaven-83wx2.jpg fill
-output * bg ~/pics/walls/nature/cherry_blossoms.jpg fill
-# output * bg #161616 solid_color
+output * scale 1
+# output * bg #000000 solid_color
+output * bg ~/pics/walls/nature/fall_nature.jpg fill #000000
+# output eDP-1 bg #161616 solid_color
+# exec glpaper "eDP-1" ~/pics/glpaper_examples/matrix.frag
 
 exec swayidle -w \
   timeout 120 'swaymsg "output * dpms off"' \
@@ -67,7 +68,7 @@ exec swayidle -w \
 
     # bindsym $mod+p exec 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.8 --ring-color ff79c6 --key-hl-color ff79c6 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2'
     bindsym $mod+p exec 'swaylock --screenshots --indicator --indicator-radius 50 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.8 --ring-color cc241d --key-hl-color cc241d --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2'
-    bindswitch lid:off exec 'swaylock --screenshots --indicator --indicator-radius 50 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.8 --ring-color cc241d --key-hl-color cc241d --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
+    # bindswitch lid:off exec 'swaylock --screenshots --indicator --indicator-radius 50 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.8 --ring-color cc241d --key-hl-color cc241d --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+q kill
@@ -113,7 +114,7 @@ exec swayidle -w \
     bindsym $mod+Shift+5 move container to workspace number 5
     bindsym $mod+Shift+6 move container to workspace number 6
     bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move contssainer to workspace number 8
+    bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
 

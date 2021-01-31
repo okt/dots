@@ -5,12 +5,12 @@
     /* `otf-font-awesome` is required to be installed for icons */
     /* font-family: "JetBrains Mono Regular Nerd Font", FontAwesome; */
     font-family: "SFMono Nerd Font", FontAwesome;
-    font-size: 16px;
+    font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(22, 22, 22, 0.9);
+    background-color: rgba(22, 22, 22, 0.85);
     color: #928374;
     /* border: 1px solid rgba(204, 36, 29, 0.2); */
     border: 1px solid rgba(87, 91, 112, 0.3);
