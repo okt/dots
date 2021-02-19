@@ -1,5 +1,9 @@
 //META{"name":"discord gruv mods","description":"A Discord theme based on Gruvbox","author":"okt","version":"1.0"}*//
 
+:root {
+   --text-normal: #C1BDB7;
+}
+
 * {
    font-family: "SF Pro Display";
 }

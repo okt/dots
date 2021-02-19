@@ -2,13 +2,14 @@
     "layer": "top",
     "position": "top",
     //"width": 1900,
-    "height": 30,
-    "margin-left": 20,
-    "margin-right": 20,
-    "margin-top": 20,
+    "height": 20,
+    "margin-left": 4,
+    "margin-right": 4,
+    "margin-top": 8,
     //"margin-bottom": 20,
-    "modules-left": [ "sway/workspaces#display", "sway/mode", "sway/window"],
+    "modules-left": [ "sway/workspaces", "sway/mode" ],
     //"modules-center": ["sway/window"],
+    //"modules-center": ["custom/waybar-media"],
     "modules-right": ["temperature", "cpu", "memory", "network", "pulseaudio", "backlight", "battery", "tray", "clock#utc", "clock"],
     // Modules configuration
     "tray": {
@@ -19,7 +20,8 @@
         "max-length": 60
     },
     "sway/workspaces": {
-         "format": "ﱣ {name}"
+         //"format": "ﱣ {name}"
+         "format": "{icon}"
      },
     "sway/workspaces#display": {
          //"disable-scroll": true,
@@ -34,7 +36,7 @@
      },
     "backlight": {
         "device": "intel_backlight",
-        "format": "{percent}% {icon}",
+        "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", ""]
     },
     "cpu": {
@@ -90,11 +92,11 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         // "format-wifi": "{essid} ({signalStrength}%) ",
         // "format-wifi": "{essid} 直",
-        "format-wifi": "{essid} 直",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-wifi": "直",
+        "format-ethernet": "{ipaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "⚠",
+        "format-alt": "{essid}: {ipaddr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -114,5 +116,13 @@
             "default": ""
         },
         "on-click": "pavucontrol"
+    },
+    "custom/waybar-media": {
+        "return-type": "json",
+        "exec": "waybar-media.py status",
+        "on-click": "waybar-media.py playpause",
+        "on-scroll-up": "waybar-media.py previous",
+        "on-scroll-down": "waybar-media.py next",
+        "escape": true
     }
 }

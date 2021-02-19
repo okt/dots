@@ -17,7 +17,22 @@
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; use 'M-x doom/reload'.
 
+(package! gruvbox-theme)
+(package! srcery-theme)
+(package! zen-mode)
 
+(package! vimgolf)
+(package! totd)
+(package! spaces)
+;; (package! soothe-theme)
+;; (package! spacegray-theme)
+(package! hackernews)
+(package! dashboard)
+;; (package! dashboard-hackernews)
+;; (package! dashboard-ls)
+;; (package! dashboard-project-status)
+(package! charmap)
+(package! org-roam)
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
 

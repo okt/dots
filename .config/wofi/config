@@ -1,8 +1,8 @@
 mode=run
 insensitive=true
 prompt=
-width=330
-lines=6
+width=830
+lines=12
 term=foot
 hide_scroll=true
 location=2

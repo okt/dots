@@ -1,5 +1,12 @@
 # Exports
 # set --export GTK_THEME "phocus"
+set --export XDG_SESSION_TYPE "wayland"
+set --export XDG_CURRENT_DESKTOP "sway"
+set --export MOZ_ENABLE_WAYLAND 1
+set --export MOZ_USE_XINPUT2 1
+set --export CLUTTER_BACKEND "wayland"
+
+# set --export GDK_BACKEND "wayland"
 set --export GRIM_DEFAULT_DIR "/home/okt/pics/snap"
 set --export SBT_OPTS "-Xms512m -Xmx1536m -Xss2m"
 set --export FZF_DEFAULT_COMMAND 'fd --type f --color=never'

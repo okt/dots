@@ -19,35 +19,20 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "SFMono Nerd Font" :size 16 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "SF Pro Display" :size 16))
-
+(setq doom-font (font-spec :family "SFMono Nerd Font" :size 18 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "SF Pro Display" :size 18))
 (setq emojify-display-style 'unicode)
 
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-horizon)
-
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("org" . "https://orgmode.org/elpa/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
-
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
-
-(set-window-margins (selected-window) 8 8)
-
+(setq doom-theme `srcery)
+(set-face-background 'internal-border "red")
+(setq confirm-kill-emacs nil)
+;; (set-window-margins (selected-window) 8 8)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
 ;; - `use-package!' for configuring packages
-;; - `after!' for running code after a package has loaded
+;; - `after!' for running code after a package has load
 ;; - `add-load-path!' for adding directories to the `load-path', relative to
 ;;   this file. Emacs searches the `load-path' when you load packages with
 ;;   `require' or `use-package'.
@@ -65,20 +50,20 @@
 
 (setq doom-themes-treemacs-theme "doom-colors")
 (setq doom-themes-treemacs-enable-variable-pitch nil)
-(custom-set-faces!
-  '(treemacs-root-face :family "SF Pro Display" :height 120)
-  '(treemacs-git-unmodified-face :family "SF Pro Display" :height 120)
-  '(treemacs-git-modified-face :family "SF Pro Display" :height 120)
-  '(treemacs-git-renamed-face :family "SF Pro Display" :height 120)
-  '(treemacs-git-ignored-face :family "SF Pro Display" :height 120)
-  '(treemacs-git-untracked-face :family "SF Pro Display" :height 120)
-  '(treemacs-git-added-face :family "SF Pro Display" :height 120)
-  '(treemacs-git-conflict-face :family "SF Pro Display" :height 120)
-  '(treemacs-directory-face :family "SF Pro Display" :height 120)
-  '(treemacs-directory-collapsed-face :family "SF Pro Display" :height 120)
-  '(treemacs-file-face :family "SF Pro Display" :height 120)
-  '(treemacs-tags-face :family "SF Pro Display" :height 120)
-  )
+;; (custom-set-faces!
+;;   '(treemacs-root-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-git-unmodified-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-git-modified-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-git-renamed-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-git-ignored-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-git-untracked-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-git-added-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-git-conflict-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-directory-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-directory-collapsed-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-file-face :family "SF Pro Display" :height 120)
+;;   '(treemacs-tags-face :family "SF Pro Display" :height 120)
+;;   )
 
 (defun my/treemacs-setup-title ()
   (let ((bg (face-attribute 'default :background))
@@ -109,42 +94,44 @@
         highlight-indent-guides-responsive t))
 
 (setq doom-modeline-enable-word-count nil)
-(setq doom-modeline-height 20)
+(setq doom-modeline-height 42)
 (setq posframe-gtk-resize-child-frames 'resize-mode)
-(setq fast-but-imprecise-scrolling t)
+;; (setq fast-but-imprecise-scrolling t)
 (add-hook 'prog-mode-hook 'pixel-scroll-mode)
 (add-hook 'text-mode-hook 'pixel-scroll-mode)
 (setq pixel-dead-time 0)
 (setq pixel-resolution-fine-flag t)
 (remove-hook! doom-first-buffer #'global-hl-line-mode)
-(use-package! centaur-tabs
-  :hook (doom-first-file . centaur-tabs-mode)
-  :init
-  (setq centaur-tabs-set-icons t)
-  (setq centaur-tabs-gray-out-icons 'buffer)
-  (setq centaur-tabs-style "chamfer")
-  (setq centaur-tabs-set-bar 'under)
-  (setq centaur-tabs-set-modified-marker t)
-  (setq centaur-tabs-modified-marker "•")
-  (setq centaur-tabs-close-button "✕")
-  (setq centaur-tabs-cycle-scope 'tabs)
-  :config
-  (add-hook '+doom-dashboard-mode-hook #'centaur-tabs-local-mode)
-  (add-hook '+popup-buffer-mode-hook #'centaur-tabs-local-mode)
-  (centaur-tabs-change-fonts "SF Pro Display" 120)
-  (centaur-tabs-group-by-projectile-project)
-  (setq centaur-tabs-set-icons t)
-  (setq centaur-tabs-set-modified-marker t)
-  (setq centaur-tabs-set-bar 'under)
-  (setq centaur-tabs-height 32)
-  (setq centaur-tabs-left-edge-margin "         ")
-  (setq centaur-tabs-right-edge-margin "         ")
-  (centaur-tabs-mode t)
-  :bind
-  (:map evil-normal-state-map
-   ("g t" . centaur-tabs-forward)
-   ("g T" . centaur-tabs-backward))
-  )
+
+;; (use-package! centaur-tabs
+;;   :hook (doom-first-file . centaur-tabs-mode)
+;;   :init
+;;   (setq centaur-tabs-set-icons t)
+;;   (setq centaur-tabs-gray-out-icons 'buffer)
+;;   (setq centaur-tabs-style "chamfer")
+;;   (setq centaur-tabs-set-bar 'under)
+;;   (setq centaur-tabs-set-modified-marker t)
+;;   (setq centaur-tabs-modified-marker "•")
+;;   (setq centaur-tabs-close-button "✕")
+;;   (setq centaur-tabs-cycle-scope 'tabs)
+;;   :config
+;;   (add-hook '+doom-dashboard-mode-hook #'centaur-tabs-local-mode)
+;;   (add-hook '+popup-buffer-mode-hook #'centaur-tabs-local-mode)
+;;   (centaur-tabs-change-fonts "SF Pro Display" 120)
+;;   (centaur-tabs-group-by-projectile-project)
+;;   (setq centaur-tabs-set-icons t)
+;;   (setq centaur-tabs-set-modified-marker t)
+;;   (setq centaur-tabs-set-bar 'under)
+;;   (setq centaur-tabs-height 32)
+;;   (setq centaur-tabs-left-edge-margin "     ")
+;;   (setq centaur-tabs-right-edge-margin "     ")
+;;   (centaur-tabs-mode t)
+;;   :bind
+;;   (:map evil-normal-state-map
+;;    ("g t" . centaur-tabs-forward)
+;;    ("g T" . centaur-tabs-backward))
+;;   )
+
 ;; Company completion
 (after! company
   (setq company-idle-delay 0)
@@ -212,5 +199,20 @@
 (setq-default x-stretch-cursor t)
 
 (after! twittering-mode
-  (setq twittering-icon-mode t)
-  )
+  (setq twittering-icon-mode t))
+
+(use-package dashboard
+  :ensure t
+  :config
+  (setq dashboard-center-content t)
+  (setq dashboard-startup-banner 'logo)
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
+  (setq dashboard-set-init-info t)
+  (setq dashboard-set-footer nil)
+  (setq dashboard-week-agenda t)
+  (dashboard-setup-startup-hook))
+
+(setq window-divider-default-right-width 3)
+(setq window-divider-default-places 'right-only)
+(window-divider-mode)
