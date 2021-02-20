@@ -11,7 +11,7 @@
 
 window#waybar {
     background-color: rgba(22, 22, 22, 0);
-    color: #928374;
+    color: #D0BFA1;
     /* border: 1px solid rgba(204, 36, 29, 0.2); */
     /* border: 1px solid rgba(87, 91, 112, 0.3); */
     transition-property: background-color;
@@ -35,7 +35,7 @@ window#waybar.solo {
     padding: 0 5px;
     background-color: transparent;
     /* color: #928374; */
-    color: #4e443a;
+    /* color: #1C1C19; */
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
 }
@@ -47,19 +47,19 @@ window#waybar.solo {
 }
 
 #workspaces button.focused {
-    color: #458588;
+    color: #0AAEB3;
     /* color: #cc241d; */
     /* color: #000000; */
     box-shadow: inset 0 -3px transparent;
 }
 
 #workspaces button.urgent {
-    color: #cc241d;
+    color: #EF2F27;
 }
 
 #mode {
-    color: #cc241d;
-    border-bottom: 3px solid #cc241d;
+    color: #EF2F27;
+    border-bottom: 3px solid #ED2D27;
 }
 
 #clock,
@@ -85,7 +85,7 @@ window#waybar.solo {
 }
 #window {
     /* color: #4F4F4F; */
-    color: #9c9991;
+    color: #D0BFA1;
     font-family: "SF Pro Display";
 }
 
@@ -100,29 +100,29 @@ window#waybar.solo {
 }
 
 #clock {
-    color: #ebdbb2;
+    color: #D0BFA1;
     /* padding-right: 50px; */
     /* padding: 0; */
     /* margin: 0; */
     padding-right: 0.43em;
 }
 .modules-right > widget:last-child > #clock {
-    /* color: #ebdbb2; */
+    /* color: #; */
     padding-right: 10px;
     padding-left: 0;
 }
 #battery {
-    color: #d79921;
+    color: #FBB829;
 }
 
 #battery.charging {
-    color: #98971a;
+    color: #519F50;
 }
 
 @keyframes blink {
     to {
         background-color: transparent;
-        color: #cc241d;
+        color: #EF2F27;
     }
 }
 
@@ -149,22 +149,22 @@ label:focus {
 
 #memory,
 #cpu {
-  color: #689d6a;
+  color: #2C78BF;
 }
 
 #backlight {
-    color: #b16286;
+    color: #0AAEB3;
 }
 
 #network.wifi {
-    color: #98971a;
+    color: #519F50;
 }
 #network.disconnected {
-    color: #cc241d;
+    color: #EF2F27;
 }
 
 #pulseaudio {
-    color: #458588;
+    color: #D75F00;
 }
 
 #pulseaudio.muted {
@@ -172,13 +172,13 @@ label:focus {
 }
 
 #temperature {
-    color: #689d6a;
+    color: #2C78BF;
     padding-right: 0;
     margin-right: 0;
 }
 
 #temperature.critical {
-    color: #cc241d;
+    color: #eF2F27;
 }
 
 #tray {

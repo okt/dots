@@ -24,7 +24,6 @@
 (setq emojify-display-style 'unicode)
 
 (setq doom-theme `srcery)
-(set-face-background 'internal-border "red")
 (setq confirm-kill-emacs nil)
 ;; (set-window-margins (selected-window) 8 8)
 
@@ -205,9 +204,10 @@
   :ensure t
   :config
   (setq dashboard-center-content t)
-  (setq dashboard-startup-banner 'logo)
-  (setq dashboard-set-heading-icons t)
-  (setq dashboard-set-file-icons t)
+  ;; (setq dashboard-startup-banner 'logo)
+  (setq dashboard-startup-banner "~/pics/ui/doom.png")
+  ;; (setq dashboard-set-heading-icons t)
+  ;; (setq dashboard-set-file-icons t)
   (setq dashboard-set-init-info t)
   (setq dashboard-set-footer nil)
   (setq dashboard-week-agenda t)
